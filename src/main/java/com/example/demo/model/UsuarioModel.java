@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "users")
+@Entity(name="users")
 public class UsuarioModel {
 
     @Id
@@ -19,9 +19,9 @@ public class UsuarioModel {
     private Integer id;
 
     @Column(unique = true)
-    private String username;
+    private String login;
 
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
 }
